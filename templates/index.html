@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Air Monitoring</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Walid Chabchoub" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="static/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="static/css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="static/css/bootstrap.css">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="static/css/flexslider.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="static/css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="static/js/modernizr-2.6.2.min.js"></script>
+
+	</head>
+	<body style="background-color:#000000;">
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container">
+
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row nopadding">
+			<div class="col-md-6 padding-right">
+				<div style="vertical-align:middle; text-align:center;" >
+					<h2 style="color:white">AIR MONITORING</h2>
+					<img class="resize" src="static/images/wind.svg" width="20%" height="20%">
+				</div>
+					<h4 style="color:#ffffff; display:block; margin:1em 0em 1em 0em; text-align:center;">T: {{curr_temp}} °C | R.H: {{r_h}} % | IAQ: {{iaq}} | eCO2: {{eco2}} ppm</h4>
+					<h4 style="color:#ffffff; display:block; margin:0em 0em 1em 0em; text-align:center;">bVOC: {{bvoc}} ppm | P: {{press}} hPa | G: {{gas}} Ohms</h4>
+					<div style="vertical-align:middle; text-align:center;">
+						<a href="/2"><button type="submit" style="margin: 0em 0em 1em 1em; color: #ffffff; background: #000000; display: inline-block;border-radius: 10px;border-width:5px; background-color:white; color:black;">2H</button></a>					
+						<a href="/4"><button type="submit" style="margin: 0em 0em 1em 1em; color: #ffffff; background: #000000; display: inline-block;border-radius: 10px;border-width:5px; background-color:white; color:black;">4H</button></a>
+						<a href="/8"><button type="submit" style="margin: 0em 0em 1em 1em; color: #ffffff; background: #000000; display: inline-block;border-radius: 10px;border-width:5px; background-color:white; color:black;">8H</button></a>
+						<a href="/12"><button type="submit" style="margin: 0em 0em 1em 1em; color: #ffffff; background: #000000; display: inline-block;border-radius: 10px;border-width:5px; background-color:white; color:black;">12H</button></a>
+						<a href="/24"><button type="submit" style="margin: 0em 0em 1em 1em; color: #ffffff; background: #000000; display: inline-block;border-radius: 10px;border-width:5px; background-color:white; color:black;">24H</button></a>
+					</div>			
+			</div>
+			<div class="col-md-6 padding-left" style="margin: 1em 0em 0em 0em;">
+					<a class="weatherwidget-io" href="https://forecast7.com/en/45d50n73d57/montreal/" data-label_1="MONTREAL" data-label_2="WEATHER" data-font="Open Sans" data-icons="Climacons Animated" data-mode="Forecast" data-theme="dark" data-accent="#111111" data-textcolor="#ffffff" data-lowcolor="#ffffff" data-suncolor="#ffffff" data-mooncolor="#ffffff" data-cloudfill="#000000" data-raincolor="#ffffff" data-snowcolor="" >MONTREAL WEATHER</a>
+					<script>
+					!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+					</script>
+					<br>
+					<!-- <h3 style="color:#ffffff; display:block; margin:auto; text-align:center;">Time now: {{curr_time}}</h3> -->
+					<div style="text-align:center; margin: 1em 0em 0em 0em">
+					<h4 style="color:#ffffff; display:block; margin:0em 0em 1em 0em; text-align:center;">GPU Temperature: {{gpu_temp}} °C | CPU Temperature: {{cpu_temp}} °C</h4>
+					<h4 style="color:#ffffff; display: inline-block;">Last measurement {{ last_meas}} minutes ago</h4>
+<!-- 					<a href="measure_now"><button type="submit" style="margin: 0em 0em 1em 1em; color: #ffffff; background: #000000; display: inline-block;border-radius: 10px;border-width:2px; background-color:white; color:black;">Measure now</button></a> -->
+					</div>
+			</div>
+		</div>
+
+		<div id="fh5co-portfolio">
+			<div class="row nopadding">
+<!-- 				<div class="col-md-6 padding-right" style="margin: 1em 0em 0em 0em;">
+					<div class="row">
+						<div class="col-md-12 animate-box">
+							<img width="100%" height="100%" id="image" style="display:block; margin:auto;" src="{{static_img_path}}">
+ 							<div style="margin: 1em 0em 0em 0em; border-color:white;border-style: solid;border-width:1px;">
+								<img width="250" height="250" id="image" src="static/images/plant_1.jpg">
+								<h3 style="color:#ffffff;display: inline-block; margin: 0em 0em 0em 3em;">Plant 1 </h3>
+							</div>
+						</div>
+					</div>
+				</div> -->
+
+				<div class="col-md-6 padding-left" style="margin: 1em 0em 0em 0em;">
+					<div class="row">
+						<div class="col-md-12 animate-box">
+							<img width="100%" height="100%" src={{temperature_path}}>
+							<img width="100%" height="100%" src={{IAQ_path}}>
+							<img width="100%" height="100%" src={{bVOC_path}}>
+<!-- 							<img width="100%" height="100%" src={{gas_path}}> -->
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 padding-left" style="margin: 1em 0em 0em 0em;">
+					<div class="row">
+						<div class="col-md-12 animate-box">
+							<img width="100%" height="100%" src={{humidity_path}}>
+							<img width="100%" height="100%" src={{eCO2_path}}>
+							<img width="100%" height="100%" src={{pressure_path}}>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- END container -->
+
+	<div class="container">
+		<footer id="fh5co-footer" role="contentinfo">
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p style="color:#ffffff;">
+						<small class="block">&copy; 2021 Walid Chabchoub. All Rights Reserved.</small> 
+						<small class="block">Powered by <a href="https://www.raspberrypi.org/" target="_blank">Raspberry Pi 4B</a></small>
+					</p>
+				</div>
+			</div>
+		</footer>
+	</div><!-- END container -->
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="static/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="static/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="static/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="static/js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="static/js/jquery.flexslider-min.js"></script>
+	<!-- Sticky Kit -->
+	<script src="static/js/sticky-kit.min.js"></script>
+	<!-- Main -->
+	<script src="static/js/main.js"></script>
+
+	</body>
+</html>
+
