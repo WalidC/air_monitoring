@@ -11,7 +11,7 @@ Air monitoring of environment (Temperature, humidity, eCO2, bVOC, etc.) using th
 
 First, we need to compile the BSEC binary and place it in the same folder. Refer to https://github.com/alexh-name/bsec_bme680_linux for instructions on compiling BSEC binary. For best results, use the `make.config` and `bsec_bme680.c` files from this repo for binary compiling (removal of temperature offset and correct CPU architecture for RPi 4B. 
 
-Once all libraries are installed and sensor is connected via I2C to the RPi, we will load up the scripts in the background starting with the data capture shell script `binary_bsec.sh` which appends the stdout in the `make.config` file. This script will query the BME680 sensor every 5 minutes (sampling rate is specified in the `make.config` file earlier) for sampling then runs the sensor output through the BSEC BOSH software that outputs IAQ, eCO2 and bVOC (which are approximations for the Indoor Air Quality indice, approximated CO2 concentration and approximate breath VOC gases concentration).
+Once all libraries are installed and sensor is connected via I2C to the RPi, we will load up the scripts in the background starting with the data capture shell script `binary_bsec.sh` which appends the stdout in the `data/BME_sensor_data.txt` file. This script will query the BME680 sensor every 5 minutes (sampling rate is specified in the `make.config` file earlier) for sampling then runs the sensor output through the BSEC BOSH software that outputs IAQ, eCO2 and bVOC (which are approximations for the Indoor Air Quality indice, approximated CO2 concentration and approximate breath VOC gases concentration).
 
 ```
 sudo pm2 start binary_bsec.sh
