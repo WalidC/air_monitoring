@@ -29,6 +29,7 @@ Finally, we are now ready to start the web server that will handles the HTTP req
 sudo pm2 start website_shell.sh
 ```
 
+The web server should now be up and running, data is being sampled every 5 minutes and plots generated every 10 minutes (delays are arbitrary and can be changed within the `time.sleep()` functions). The RPi should be serving the website on `localhost:80` on itself and locally on its local ip (e.g: `192.168.0.150:80`)
 
 # Troubleshooting
 
